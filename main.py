@@ -30,7 +30,7 @@ def get_count():
   return delta.days
 
 def get_aa():
-  ppa = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+  ppa = time.strftime('%Y-%m-%d', time.localtime(time.time()))
   return ppa
 
 
