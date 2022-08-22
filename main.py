@@ -35,7 +35,7 @@ def get_aa():
   return ppa
 
 def get_urban():
-  urban = city
+  urban = os.environ['CITY']
   return urban
 
 def get_birthday():
