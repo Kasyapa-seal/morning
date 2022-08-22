@@ -31,7 +31,7 @@ def get_count():
 
 def get_aa():
   ppa = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
-  return ppa.days
+  return ppa
 
 
 def get_birthday():
