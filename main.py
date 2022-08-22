@@ -28,7 +28,7 @@ def get_count():
   delta = today - datetime.strptime(start_date, "%Y-%m-%d")
   return delta.days
 
-def get_count():
+def get_today():
   appa = datetime.strptime(start_date, "%Y-%m-%d")
   return appa.days
 
