@@ -29,7 +29,7 @@ def get_count():
   return delta.days
 
 def get_today():
-  appa = datetime.strptime(start_date, "%Y-%m-%d")
+  appa = datetime.now()
   return appa.days
 
 def get_birthday():
