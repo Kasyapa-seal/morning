@@ -6,6 +6,7 @@ import requests
 import os
 import random
 import time
+import urban
 
 today = datetime.now()
 start_date = os.environ['START_DATE']
@@ -33,6 +34,9 @@ def get_aa():
   ppa = time.strftime('%Y-%m-%d', time.localtime(time.time()))
   return ppa
 
+def get_urban():
+  urban = city
+  return urban
 
 def get_birthday():
   next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
@@ -54,6 +58,6 @@ client = WeChatClient(app_id, app_secret)
 
 wm = WeChatMessage(client)
 wea, temperature = get_weather()
-data = {"weather":{"value":wea},"temperature":{"value":temperature},"today":{"value":get_aa()},"love_days":{"value":get_count()},"birthday_left":{"value":get_birthday()},"words":{"value":get_words(), "color":get_random_color()}}
+data = {"weather":{"value":wea},"temperature":{"value":temperature},"city":{"value":get_urban()},"today":{"value":get_aa()},"love_days":{"value":get_count()},"birthday_left":{"value":get_birthday()},"words":{"value":get_words(), "color":get_random_color()}}
 res = wm.send_template(user_id, template_id, data)
 print(res)
