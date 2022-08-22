@@ -30,7 +30,7 @@ def get_count():
 
 def get_a():
   a = today
-  return a
+  return a.days
 
 def get_birthday():
   next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
